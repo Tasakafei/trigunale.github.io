@@ -2,17 +2,21 @@
 
 // Declare app level module which depends on views, and components
 var app = angular.module('trigunale', [
-    'ngRoute',
-    'trigunale.curiculum'
-])
+    'ngRoute'
+]);
 
-app.config(['$locationProvider', '$routeProvider', function($routeProvider) {
+app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
       .when("/", {
-        templateUrl: "main.html"
+        template: "I'm a banana"
       })
-      .when("/curiculum-vitae", {
-        templateUrl: "/curiculum/curiculum.html"
+      .when("/curiculum", {
+          templateUrl: "curiculum.html"
       })
-
+      .otherwise({
+          template: "otherwise"
+      });
+      // .when("/curiculum-vitae", {
+      //   templateUrl: "/curiculum/curiculum.html"
+      // })
 }]);
