@@ -9,15 +9,14 @@ var app = angular.module('trigunale', [
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
       .when("/", {
-          templateUrl: "curiculum/curiculum.html",
-          controller: "curiculumCtrl"
+        redirectTo: '/curiculum'
       })
       .when("/curiculum", {
           templateUrl: "curiculum/curiculum.html",
           controller: "curiculumCtrl"
       })
       .otherwise({
-          template: "otherwise"
+          redirectTo: '/'
       });
       // .when("/curiculum-vitae", {
       //   templateUrl: "/curiculum/curiculum.html"
