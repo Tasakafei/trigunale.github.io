@@ -9,7 +9,8 @@ var app = angular.module('trigunale', [
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
       .when("/", {
-        templateUrl: "home.html"
+          templateUrl: "curiculum/curiculum.html",
+          controller: "curiculumCtrl"
       })
       .when("/curiculum", {
           templateUrl: "curiculum/curiculum.html",
